@@ -12,13 +12,13 @@ importPaths "lib"
 dependency "requests" version="~>2"
 dependency "slf4d" version="~>2"
 
-configuration "plist-d" {
-    dependency "plist" version="~master"
-}
+// configuration "plist-d" {
+//     dependency "plist" version="~master"
+// }
 
 configuration "libplist" {
     versions "LibPlist"
-    dependency "plist-d" repository="git+https://github.com/Dadoum/libplist-d.git" version="30d152e88767611e10048b25777ecb5f9075f87c"
+    dependency "plist-d" repository="git+https://github.com/Dadoum/libplist-d.git" version="6fdaa60d62bbf7c55044069e8f03cbe74401c444"
 }
 
 subPackage {

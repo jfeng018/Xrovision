@@ -8,16 +8,13 @@ env:
 
 jobs:
   build-anisette-server-aarch64:
-    runs-on: ubuntu-latest
-    container: ubuntu:23.04
+    runs-on: ubuntu-24.04
 
     steps:
     - name: Install dependencies
       run: |
-        apt-get update
-        apt-get install -y software-properties-common
-        add-apt-repository ppa:ubuntu-toolchain-r/ppa
-        apt-get install -y git gdc-13-aarch64-linux-gnu dub libz-dev elfutils
+        sudo apt-get update
+        sudo apt-get install -y software-properties-common git gdc-13-aarch64-linux-gnu dub libz-dev elfutils
 
     - uses: actions/checkout@v3
       with:
@@ -40,16 +37,13 @@ jobs:
           bin/anisette-server-aarch64.dbg
 
   build-anisette-server-armv7:
-    runs-on: ubuntu-latest
-    container: ubuntu:23.04
+    runs-on: ubuntu-24.04
 
     steps:
     - name: Install dependencies
       run: |
-        apt-get update
-        apt-get install -y software-properties-common
-        add-apt-repository ppa:ubuntu-toolchain-r/ppa
-        apt-get install -y git gdc-13-arm-linux-gnueabihf dub libz-dev elfutils
+        sudo apt-get update
+        sudo apt-get install -y software-properties-common git gdc-13-arm-linux-gnueabihf dub libz-dev elfutils
 
     - uses: actions/checkout@v3
       with:
